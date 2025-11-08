@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Privacy Policy — Smart Subscription Tracker & Reminder</title>
+  <meta name="description" content="Privacy Policy for Smart Subscription Tracker & Reminder Chrome extension." />
+  <style>
+    body{font-family:Inter,system-ui,Arial,sans-serif;color:#0f172a;line-height:1.6;margin:28px;max-width:900px}
+    h1{font-size:22px;margin-bottom:6px}
+    h2{font-size:16px;margin-top:20px}
+    p{margin:10px 0}
+    ul{margin:8px 0 12px 20px}
+    code{background:#f3f4f6;padding:2px 6px;border-radius:4px}
+    .muted{color:#6b7280;font-size:13px}
+    footer{margin-top:24px;font-size:13px;color:#6b7280}
+    a{color:#0369a1}
+  </style>
+</head>
+<body>
+  <h1>Privacy Policy</h1>
+  <p class="muted">Last updated: <strong>November 8, 2025</strong></p>
+
+  <p>This Privacy Policy explains how <strong>Smart Subscription Tracker & Reminder</strong> (the "Extension") collects, uses, stores, and protects information when installed and used in the Google Chrome browser. The Extension is built to operate locally in your browser and is designed to minimize data collection and to protect user privacy.</p>
+
+  <h2>Data We Collect</h2>
+  <p>The Extension only stores information that you explicitly enter into it. This includes:</p>
+  <ul>
+    <li>Subscription information: service name, amount, renewal date, next renewal date, renewal cycle, notes, and optional subscription URL.</li>
+    <li>Local preferences: currency selection, dark mode preference, sort/filter settings, and other UI preferences.</li>
+  </ul>
+  <p>The Extension does <strong>not</strong> automatically collect browsing history, device identifiers, IP addresses, or any analytics data.</p>
+
+  <h2>How Data Is Stored</h2>
+  <p>All data is stored locally on the user's device using Chrome's <code>chrome.storage.local</code> API. The data remains on the device and is not transmitted to or stored on external servers by the Extension.</p>
+
+  <h2>Permissions and Why They Are Needed</h2>
+  <p>The Extension requests only the permissions required for its core functionality:</p>
+  <ul>
+    <li><strong>storage</strong>: To save subscriptions and user preferences locally.</li>
+    <li><strong>alarms</strong>: To schedule background reminders for upcoming subscription renewals.</li>
+    <li><strong>notifications</strong>: To display local desktop notifications when a renewal is approaching.</li>
+    <li><strong>downloads</strong> (optional, requested at runtime): To allow users to export their subscriptions as a JSON backup when they explicitly choose to do so.</li>
+  </ul>
+  <p>The Extension intentionally avoids requesting broad host permissions (for example, <code>&lt;all_urls&gt;</code>) and does not use content scripts or cross-origin network requests in its current design.</p>
+
+  <h2>Export & Import</h2>
+  <p>Users may export their subscription data to a <code>.json</code> file. If the export feature is invoked, the Extension will request the <code>downloads</code> permission at runtime (only when the user chooses to export). Imported files are processed locally in the browser and saved to <code>chrome.storage.local</code> if the user confirms the import.</p>
+
+  <h2>Third-Party Services</h2>
+  <p>The Extension does not send data to third-party analytics, advertising networks, or external servers by default. If future versions add integrations with third-party services, the Privacy Policy will be updated and users will be informed.</p>
+
+  <h2>Data Retention and Deletion</h2>
+  <p>Because data is stored locally, users control their data. To remove data you can:</p>
+  <ul>
+    <li>Delete individual subscriptions inside the Extension UI.</li>
+    <li>Clear all stored data by uninstalling the Extension (Chrome removes extension-specific local storage on uninstall).</li>
+    <li>Manually remove storage via Chrome’s extension settings or developer tools.</li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>The Extension is not intended for children under the age of 13. We do not knowingly collect information from children.</p>
+
+  <h2>Security</h2>
+  <p>We follow standard best practices to limit data exposure: data is stored using the browser's local storage APIs and is not transmitted externally. Users are responsible for securing their device and browser profile. If you believe your data has been exposed due to device compromise, please remove the Extension and reset any affected accounts.</p>
+
+  <h2>Your Rights</h2>
+  <p>Because data is stored locally and not transmitted to third parties, you have direct control over your information. You may view, edit, export, or delete your subscriptions at any time from within the Extension.</p>
+
+  <h2>Changes to This Policy</h2>
+  <p>We may update this Privacy Policy from time to time. If we make any material changes, we will update the "Last updated" date at the top of this page. Continued use of the Extension after changes indicates acceptance of the updated policy.</p>
+
+  <h2>Contact</h2>
+  <p>If you have any questions, concerns, or requests about this Privacy Policy or your data, please contact us at: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a>.</p>
+
+  <footer>
+    <p class="muted">Smart Subscription Tracker & Reminder — Support: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a></p>
+  </footer>
+</body>
+</html>
