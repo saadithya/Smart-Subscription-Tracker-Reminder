@@ -1,0 +1,93 @@
+<!doctype html>
+</nav>
+
+
+<main class="container">
+<!-- Subscriptions list -->
+<section id="subscriptions-container" class="card" aria-labelledby="subscriptions-tab">
+<div id="no-subscriptions" class="small">No subscriptions yet — Click <strong>+ Add</strong> to create one.</div>
+<div id="subscriptions-list"></div>
+</section>
+
+
+<!-- Dashboard -->
+<section id="dashboard-container" class="card" style="display:none;" aria-labelledby="dashboard-tab">
+<div>
+<div class="small">Monthly spending</div>
+<h2 id="monthly-spending">$0.00</h2>
+</div>
+<div style="margin-top:8px">
+<div class="small">Annual spending</div>
+<h3 id="annual-spending">$0.00</h3>
+</div>
+<div style="margin-top:8px">
+<div class="small">Active subscriptions</div>
+<div id="active-subscriptions">0</div>
+</div>
+</section>
+
+
+<!-- Disclaimer -->
+<section id="disclaimer-container" class="card" style="display:none;" aria-labelledby="disclaimer-tab">
+<strong>Privacy & data</strong>
+<p class="small">This extension stores subscription information locally in your browser (Chrome storage). No data is transmitted to external servers. For full details see the Privacy Policy.</p>
+<p class="small">Support: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a></p>
+</section>
+</main>
+
+
+<footer class="small">
+<a class="privacy" href="privacy_policy.html">Privacy Policy</a> • Support: <a href="mailto:sujith8115@gmail.com">sujith8115@gmail.com</a>
+</footer>
+
+
+<!-- Add subscription modal (hidden default) -->
+<div id="subscription-form-modal" class="modal" role="dialog" aria-hidden="true">
+<div class="modal-content">
+<button class="close" style="float:right">✕</button>
+<h3 id="form-title">Add Subscription</h3>
+<form id="subscription-form">
+<input type="hidden" id="subscription-id">
+<label for="service-name">Service name</label>
+<input id="service-name" name="serviceName" type="text" required />
+
+
+<label for="subscription-url">Subscription URL (optional)</label>
+<input id="subscription-url" name="subscriptionUrl" type="text" placeholder="https://" />
+
+
+<label for="amount">Amount</label>
+<input id="amount" name="amount" type="number" step="0.01" required />
+
+
+<label for="renewal-date">Renewal date</label>
+<input id="renewal-date" name="renewalDate" type="date" required />
+
+
+<label for="renewal-cycle">Renewal cycle</label>
+<select id="renewal-cycle" name="renewalCycle">
+<option value="monthly">Monthly</option>
+<option value="yearly">Yearly</option>
+<option value="custom">Custom</option>
+</select>
+
+
+<label for="notes">Notes</label>
+<textarea id="notes" name="notes" rows="3"></textarea>
+
+
+<label><input id="enable-reminder" type="checkbox" checked /> Enable reminder (2 days before)</label>
+
+
+<div style="margin-top:12px;display:flex;gap:8px;justify-content:flex-end">
+<button type="button" id="cancel-btn" class="ghost">Cancel</button>
+<button type="submit" class="btn">Save</button>
+</div>
+</form>
+</div>
+</div>
+
+
+<script src="popup.js"></script>
+</body>
+</html>
